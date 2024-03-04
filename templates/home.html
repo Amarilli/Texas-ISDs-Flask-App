@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Education and Funding: a Visualization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+ <style>
+        .routes h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Arial', cursive;
+            color: #003399;
+        }
+    </style>
+  </head>
+<body style="background-image: url('https://media.khou.com/assets/KHOU/images/d801dc4e-93d2-444d-93cf-34f5a1c202fe/d801dc4e-93d2-444d-93cf-34f5a1c202fe_1140x641.jpg'); background-size: cover;">
+    <div class="container">
+        <header>
+            <div class="title-box">
+                <h1 style="font-size: 3rem; font-weight: bold; color: #fff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Texas Education and Funding: a Visualization</h1>
+            </div>
+        </header>
+        <div class="routes">
+            <h1 style="text-align: center;">Available Routes:</h1>
+            <ul>
+                <li><a href="/texasSchoolsDB/school_info" class="route-link">School Info</a></li>
+                <li><a href="/texasSchoolsDB/current_districts_geojson" class="route-link">Current Districts GeoJSON</a></li>
+                <li><a href="/texasSchoolsDB/scores_finances_coordinates" class="route-link">Scores & Finances Coordinates</a></li>
+                <li><a href="/texasSchoolsDB/coordinates" class="route-link">Coordinates</a></li>
+                <li><a href="/texasSchoolsDB/demographics" class="route-link">Demographics</a></li>
+                <li><a href="/map" class="route-link">District Map</a></li>
+                <li><a href="/heatmap" class="route-link">Heat Map</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('a').on('click', function(e) {
+                e.preventDefault();
+                const url = $(this).attr('href');
+                window.location.href = url;
+            });
+        });
+    </script>
+    <style>
+        .title-box {
+            background: linear-gradient(to right, red 50%, blue 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .title-box:hover {
+            background-position: left bottom;
+        }
+
+        .routes {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</body>
+</html>

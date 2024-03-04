@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.routes {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.routes h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.routes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.routes li {
+    margin-bottom: 10px;
+}
+
+.routes a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.routes a:hover {
+    text-decoration: underline;
+}
